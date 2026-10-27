@@ -1,0 +1,285 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #eeeeee;
+    font-family: 'Cinzel', serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #080808;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span,
+h1 span,
+h2 span,
+.card .simbolo,
+.frase span {
+    color: #b52330;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #aaaaaa;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c52b39;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        linear-gradient(90deg, #080808 10%, #080808d9 60%, #08080866),
+        url('https://giffiles.alphacoders.com/147/147569.gif')
+        center / cover;
+}
+
+.hero-content {
+    max-width: 650px;
+    animation: aparecer 1.2s ease;
+}
+
+.tag {
+    color: #c12b38;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(50px, 8vw, 95px);
+    line-height: 1.1;
+    letter-spacing: 3px;
+}
+
+.descricao {
+    color: #aaaaaa;
+    font-family: Arial, sans-serif;
+    line-height: 1.9;
+    max-width: 480px;
+    margin: 25px 0 35px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 24px;
+    border: 1px solid #b52330;
+    background: #8e1d29;
+    color: white;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #c12b38;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 85px 10%;
+    scroll-margin-top: 80px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.sobre {
+    background: #101010;
+    text-align: center;
+}
+
+.sobre p {
+    max-width: 760px;
+    margin: auto;
+    color: #aaaaaa;
+    font: 15px/2 Arial, sans-serif;
+}
+
+.servicos h2,
+.contato h2 {
+    margin-bottom: 45px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: #101010;
+    border: 1px solid #292929;
+    padding: 30px 24px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #a52330;
+    transform: translateY(-6px);
+}
+
+.simbolo {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #999999;
+    font: 13px/1.9 Arial, sans-serif;
+}
+
+.frase {
+    text-align: center;
+    background: #111111;
+}
+
+.frase p {
+    font-size: clamp(18px, 3vw, 28px);
+    line-height: 1.8;
+}
+
+.contato {
+    background: #101010;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    gap: 17px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 16px;
+    background: #080808;
+    color: white;
+    border: 1px solid #333333;
+    font: 14px Arial, sans-serif;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #b52330;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#mensagem {
+    color: #d2a1a5;
+    font: 14px Arial, sans-serif;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    border-top: 1px solid #292929;
+    color: #777777;
+    font: 12px/2 Arial, sans-serif;
+}
+
+footer p:first-child {
+    color: #b52330;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 8px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 750px) {
+    header {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 65px 7%;
+        min-height: 75vh;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
