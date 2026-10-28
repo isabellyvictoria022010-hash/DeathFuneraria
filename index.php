@@ -39,6 +39,11 @@
                 <a href="#servicos" class="botao">
                     CONHEÇA NOSSOS SERVIÇOS
                 </a>
+                
+                <a href="caixoes.html" class="botao botao-caixoes">
+                    VER CAIXÕES
+                </a>
+
             </div>
         </section>
 
@@ -128,6 +133,16 @@
     </footer>
 
     <script src="script.js"></script>
+
+    
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="caixoes.html">Caixões</a>
+    <a href="#contato">Contato</a>
+</nav>
+
 
 </body>
 </html>
